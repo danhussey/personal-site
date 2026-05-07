@@ -1,162 +1,284 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniel Hussey - Software & Data Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @keyframes scroll {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-50%); }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Hussey</title>
+  <meta name="description" content="ML engineer and medical student. Sydney, Australia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f3ec;
+      --ink: #1a1a1a;
+      --muted: #6b6357;
+      --rule: #d8d1c2;
+      --accent: #8b3a1f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161513;
+        --ink: #ece6d8;
+        --muted: #948c7d;
+        --rule: #2d2a25;
+        --accent: #d97a4f;
       }
-      .animate-scroll {
-        animation: scroll 10s linear infinite;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 1.75rem 6rem;
+      font-size: 17px;
+    }
+
+    @media (min-width: 720px) {
+      body {
+        padding: 7rem 2rem 8rem;
+        font-size: 18px;
       }
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: .5; }
-      }
-      .animate-pulse {
-        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="relative min-h-screen bg-black text-[#00ff9d] font-mono p-4">
-      <!-- Main Content -->
-      <div class="relative z-10 pb-16">
-<!-- Header -->
-<div class="border-2 border-[#ff6b00] p-4 mb-8">
-  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-    <h1 class="text-[#ff6b00] text-2xl font-bold tracking-wider whitespace-nowrap">DANIEL HUSSEY</h1>
-    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 w-full sm:w-auto">
-      <a href="https://twitter.com/danrhuss" target="_blank" rel="noopener noreferrer" class="text-[#00ff9d] hover:text-[#ff6b00] transition-colors">
-        <div class="flex items-center gap-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-          <span class="text-sm hidden xxs:inline">Twitter</span>
-        </div>
-      </a>
-      <a href="https://github.com/danhussey" target="_blank" rel="noopener noreferrer" class="text-[#00ff9d] hover:text-[#ff6b00] transition-colors">
-        <div class="flex items-center gap-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          <span class="text-sm hidden xxs:inline">GitHub</span>
-        </div>
-      </a>
-      <a href="#" onclick="window.location.href='mailto:'+atob('aW5mb0BodXNzZXkuaW8=');return false;" class="text-[#00ff9d] hover:text-[#ff6b00] transition-colors">
-        <div class="flex items-center gap-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="text-sm hidden xxs:inline">Email</span>
-        </div>
-      </a>
-      <div class="flex items-center gap-2">
-        <span class="text-sm whitespace-nowrap">CODE:132</span>
-        <svg class="w-5 h-5 text-[#ff6b00] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      </div>
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.25rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 0.25rem;
+      line-height: 1.05;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin: 3.5rem 0 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    p {
+      margin: 0 0 1.1rem;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-name {
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+
+    .project-name a {
+      border-bottom: none;
+    }
+
+    .project-name a:hover {
+      color: var(--accent);
+    }
+
+    .writing-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .writing-list li {
+      margin-bottom: 1.1rem;
+    }
+
+    .writing-list .title {
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .writing-list .title a {
+      border-bottom: none;
+      font-style: italic;
+    }
+
+    .writing-list .title a:hover {
+      color: var(--accent);
+    }
+
+    .writing-list .desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .more {
+      margin-top: 1.5rem;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.8rem;
+    }
+
+    .more a {
+      border-bottom: none;
+      color: var(--muted);
+    }
+
+    .more a:hover { color: var(--accent); }
+
+    .contact {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.85rem;
+      line-height: 2;
+    }
+
+    .contact a {
+      border-bottom: none;
+      color: var(--ink);
+    }
+
+    .contact a:hover { color: var(--accent); }
+
+    .sep {
+      color: var(--muted);
+      margin: 0 0.5rem;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* subtle entrance */
+    header, section {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: rise 0.6s ease forwards;
+    }
+    header { animation-delay: 0.05s; }
+    section:nth-of-type(1) { animation-delay: 0.15s; }
+    section:nth-of-type(2) { animation-delay: 0.25s; }
+    section:nth-of-type(3) { animation-delay: 0.35s; }
+    section:nth-of-type(4) { animation-delay: 0.45s; }
+    section:nth-of-type(5) { animation-delay: 0.55s; }
+
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      header, section { opacity: 1; transform: none; animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel Hussey</h1>
+    <p class="tagline">Sydney — code, medicine, the future</p>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I write code, study medicine, and think a lot about the future.</p>
+    <p>I live in Sydney, where I split my time between hospital wards and terminal windows. I'm very interested in AI and want to work at a frontier lab on capable systems and labor automation.</p>
+    <p>Before medicine I studied mechatronic and space engineering, built software for mines, and analysed connectomes at a neurotech company. I wrote code for a cube-satellite payload (CUAVA-1) that got launched to low earth orbit by SpaceX and JAXA.</p>
+  </section>
+
+  <section>
+    <h2>Building</h2>
+
+    <div class="project">
+      <div class="project-name"><a href="https://senvaro.com">Senvaro</a></div>
+      <p>AI clinical documentation that runs on the clinician's device. In-browser transcription via WebGPU and ONNX runtime, with patient data never leaving the practice. An experiment in how far privacy-preserving on-device inference can be pushed in a regulated industry.</p>
     </div>
-  </div>
-</div>
 
-        <!-- Main Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Data Engineer Section -->
-          <div class="border border-[#00ff9d] p-4 bg-black/50 backdrop-blur">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xl font-bold">DATA CONSULTING</span>
-              <svg class="w-6 h-6 text-[#00ff9d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <div class="space-y-4">
-              <div class="border border-[#00ff9d] p-2">
-                <div class="text-sm opacity-80">SYNC RATE</div>
-                <div class="text-lg">98.45%</div>
-              </div>
-              <div class="h-24 border border-[#00ff9d] p-2 overflow-hidden">
-                <div class="text-xs space-y-1 animate-scroll">
-                    <div class="whitespace-nowrap overflow-hidden">>000analyzing patterns</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing flows</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010forecasting trends</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mapping pipelines</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100validating schema</div>
-                    <div class="whitespace-nowrap overflow-hidden">>000analyzing patterns</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing flows</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010forecasting trends</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mapping pipelines</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100validating schema</div>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Software Dev Section -->
-          <div class="border border-[#00ff9d] p-4 bg-black/50 backdrop-blur">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xl font-bold">SNR SOFTWARE ENGINEER</span>
-              <svg class="w-6 h-6 text-[#00ff9d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <div class="space-y-4">
-              <div class="border border-[#00ff9d] p-2">
-                <div class="text-sm opacity-80">SYNC RATE</div>
-                <div class="text-lg">99.12%</div>
-              </div>
-              <div class="h-24 border border-[#00ff9d] p-2 overflow-hidden">
-                <div class="text-xs space-y-1 animate-scroll">
-                    <div class="whitespace-nowrap overflow-hidden">>000analyzing patterns</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing flows</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010forecasting trends</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mapping pipelines</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100validating schema</div>
-                    <div class="whitespace-nowrap overflow-hidden">>000analyzing patterns</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing flows</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010forecasting trends</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mapping pipelines</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100validating schema</div>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Machine Learning Section -->
-          <div class="border border-[#00ff9d] p-4 bg-black/50 backdrop-blur">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xl font-bold">AI SPECIALIST</span>
-              <svg class="w-6 h-6 text-[#00ff9d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            </div>
-            <div class="space-y-4">
-              <div class="border border-[#00ff9d] p-2">
-                <div class="text-sm opacity-80">SYNC RATE</div>
-                <div class="text-lg">99.87%</div>
-              </div>
-              <div class="h-24 border border-[#00ff9d] p-2 overflow-hidden space-y-4">
-                <div class="text-xs space-y-1 animate-scroll">
-                    <div class="whitespace-nowrap overflow-hidden">>000refactoring core</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing runtime</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010reviewing PRs</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mentoring team</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100scaling systems</div>
-                    <div class="whitespace-nowrap overflow-hidden">>000refactoring core</div>
-                    <div class="whitespace-nowrap overflow-hidden">>001optimizing runtime</div>
-                    <div class="whitespace-nowrap overflow-hidden">>010reviewing PRs</div>
-                    <div class="whitespace-nowrap overflow-hidden">>011mentoring team</div>
-                    <div class="whitespace-nowrap overflow-hidden">>100scaling systems</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Footer Status Bar -->
-        <div class="fixed bottom-0 left-0 right-0 border-t border-[#00ff9d] bg-black/90 p-2 mt-8">
-            <div class="flex flex-col sm:flex-row justify-between text-sm gap-2 sm:gap-0">
-              <div class="flex items-center gap-2 sm:gap-4">
-                <span>SYS:BUILDING</span>
-                <a href="https://twitter.com/danrhuss" target="_blank" rel="noopener noreferrer" class="text-[#00ff9d] hover:text-[#ff6b00] transition-colors">@danrhuss</a>
-              </div>
-              <div class="flex items-center justify-between sm:gap-4">
-                <span>PRIORITY:A</span>
-                <span class="text-[#ff6b00]">PROCESSING DATA</span>
-          </div>
-        </div>
-      </div>
+    <div class="project">
+      <div class="project-name"><a href="https://github.com/danhussey/specguard-chem">SpecGuard-Chem</a></div>
+      <p>LLM safety evaluation framework for medicinal chemistry queries. Submitted to NeurIPS '26. MD research project supervised by Prof. Thomas Balle (USyd).</p>
     </div>
-  </body>
+
+    <div class="project">
+      <div class="project-name"><a href="https://github.com/danhussey/act_implementation">Action Chunking Transformer</a></div>
+      <p>Independent implementation of ACT for learned robotic manipulation policies.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Writing</h2>
+    <ul class="writing-list">
+      <li>
+        <span class="title"><a href="https://danhussey.bearblog.dev/lumine-how-a-7b-model-plays-genshin-impact-for-5-hours/">Lumine: How a 7B Model Plays Genshin Impact for 5 Hours</a></span>
+        <span class="desc">What a small open model can and can't do as a long-horizon game-playing agent.</span>
+      </li>
+      <li>
+        <span class="title"><a href="https://danhussey.bearblog.dev/craftsmanship-per-million-tokens/">Craftsmanship, per Million Tokens</a></span>
+        <span class="desc">On what good engineering means when the marginal cost of code keeps falling.</span>
+      </li>
+      <li>
+        <span class="title"><a href="https://danhussey.bearblog.dev/debugging-the-chatgpt-mac-apps-keyboard-input-lag/">Debugging the ChatGPT Mac App's Keyboard Input Lag</a></span>
+        <span class="desc">Reverse-engineering a SwiftUI render loop that was costing me my sanity.</span>
+      </li>
+    </ul>
+    <div class="more"><a href="https://danhussey.bearblog.dev/blog/">More posts →</a></div>
+  </section>
+
+  <section>
+    <h2>Interests</h2>
+    <p>Artificial general intelligence. Generalised robotics. Space colonisation. Longevity and precision medicine, oncology. Neuroscience and connectomics. Economics and incentives, the wealth of individuals and nations. Decentralised, permissionless money.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:Daniel.R.Hussey@gmail.com">Daniel.R.Hussey@gmail.com</a><br />
+      <a href="https://x.com/danrhuss">X</a><span class="sep">·</span><a href="https://github.com/danhussey">GitHub</a><span class="sep">·</span><a href="https://bear-images.sfo2.cdn.digitaloceanspaces.com/danhussey/daniel_hussey_resume_2026-05-08.pdf">Resume (PDF)</a>
+    </div>
+  </section>
+
+  <footer>
+    Sydney, Australia
+  </footer>
+</body>
 </html>
